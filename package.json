@@ -1,0 +1,24 @@
+{
+  "name": "dockerized-razzle-nestjs-template",
+  "version": "1.0.0",
+  "description": "A dockerized Razzle and NestJS project template in TypeScript.",
+  "author": "Veri Ferdiansyah <veri.ferdi@gmail.com> (https://vferdiansyah.github.io)",
+  "license": "MIT",
+  "scripts": {
+    "deps:install": "./bin/install-deps.sh"
+  },
+  "repository": "github:vferdiansyah/dockerized-razzle-nestjs-template",
+  "bugs": "https://github.com/vferdiansyah/dockerized-razzle-nestjs-template/issues",
+  "homepage": "https://github.com/vferdiansyah/dockerized-razzle-nestjs-template#readme",
+  "keywords": [
+    "node",
+    "nodejs",
+    "express",
+    "expressjs",
+    "react",
+    "reactjs",
+    "razzle",
+    "nestjs",
+    "typescript"
+  ]
+}

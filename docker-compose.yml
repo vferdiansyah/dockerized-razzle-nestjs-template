@@ -1,0 +1,39 @@
+version: "3.2"
+services:
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "1337:80"
+      - "3001:81"
+    depends_on:
+      - server
+      - client
+  client:
+    build:
+      dockerfile: Dockerfile
+      context: ./client
+    volumes:
+      - type: volume
+        source: client_volume
+        target: /app/node_modules
+      - type: bind
+        source: ./client
+        target: /app
+  server:
+    build:
+      dockerfile: Dockerfile
+      context: ./server
+    volumes:
+      - type: volume
+        source: server_volume
+        target: /app/node_modules
+      - type: bind
+        source: ./server
+        target: /app
+
+volumes:
+  client_volume:
+  server_volume:
